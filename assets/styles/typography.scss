@@ -3,6 +3,8 @@ $montserrat-sans: Montserrat, sans-serif;
 
 body {
   background-image: url('http://i.imgur.com/ZxvmZhm.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 header {
@@ -16,4 +18,8 @@ header {
 .nav-buttons {
   margin: 0 auto;
   text-align: center;
+}
+
+.navbar {
+  background-color: $header-color;
 }
