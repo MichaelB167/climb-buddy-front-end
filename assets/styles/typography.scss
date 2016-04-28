@@ -1,0 +1,19 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:700);
+$montserrat-sans: Montserrat, sans-serif;
+
+body {
+  background-color: $background-color;
+}
+
+header {
+  color: $header-color;
+  float: left;
+  font-family: $montserrat-sans;
+  margin-left: 15%;
+  margin-top: -15px;
+}
+
+.nav-buttons {
+  margin: 0 auto;
+  text-align: center;
+}
