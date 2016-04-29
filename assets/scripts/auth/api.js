@@ -82,6 +82,7 @@ const createGym = (success, failure, data) => {
   $.ajax({
     method: "POST",
     url: app.api + '/gyms',
+    dataType: 'json',
     headers: {
       Authorization: 'Token token='+ app.user.token,
     },

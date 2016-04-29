@@ -28,7 +28,7 @@ const addHandlers = () => {
       event.preventDefault();
       authApi.updatePassword(authUi.updatePasswordSuccess, authUi.failure, data);
   });
-  $('#logGym').on('submit', function (event) {
+  $('#addGymModal').on('submit', function (event) {
       event.preventDefault();
       let data = getFormFields(event.target);
       //get data, prevents default
