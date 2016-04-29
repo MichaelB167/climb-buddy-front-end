@@ -5,9 +5,12 @@
     <script src="http://localhost:8080/webpack-dev-server.js"></script>
     <script src="vendor.bundle.js" type="text/javascript" charset="utf-8" defer></script>
     <script src="bundle.js" type="text/javascript" charset="utf-8" defer></script>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   </head>
 
-  <body>
+  <body data-spy="scroll">
 
     <!-- sign up modal -->
 
@@ -104,13 +107,27 @@
       </div>
     </div>
 
-    <!--navbar buttons-->
+    <!--navbar-->
 
-    <nav class="navbar navbar-default">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container-fluid">
-        <header>
-          <h2>Climb Hard</h2>
-        </header>
+        <div class=nav-styling>
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">ClimbHard</a>
+          </div>
+          <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+              <li><a href="#section1">Home</a></li>
+              <li><a href="#section2">Enter Climbs</a></li>
+              <li><a href="#section3">Check Your Progress</a></li>
+            </ul>
+          </div>
+        </div>
         <div class="nav-buttons">
           <button type="button" class="btn btn-default navbar-btn" data-toggle="modal" data-target="#signUpModal">Sign Up</button>
           <button type="button" class="btn btn-default navbar-btn" data-toggle="modal" data-target="#signInModal">Sign In</button>
@@ -119,7 +136,17 @@
         </div>
       </div>
     </nav>
-    
+
+    <div class="section1" div id="section1" class="container-fluid">
+      <h1></h1>
+    </div>
+    <div class="section2" div id="section2" class="container-fluid">
+      <h1>Section 2</h1>
+    </div>
+    <div class="section3" div id="section3" class="container-fluid">
+      <h1>Section 3</h1>
+    </div>
+
     <div class="entry-fields">
       <form class="form-inline">
         <div class="form-group">
@@ -145,5 +172,6 @@
         </div>
       </form>
     </div>
+
   </body>
 </html>
