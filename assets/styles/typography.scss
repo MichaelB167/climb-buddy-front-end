@@ -2,6 +2,7 @@
 $montserrat-sans: Montserrat, sans-serif;
 
 body {
+  background-color: $background-color;
   background-image: url('http://i.imgur.com/ZxvmZhm.jpg');
   background-repeat: no-repeat;
   background-size: cover;
@@ -21,5 +22,9 @@ header {
 }
 
 .navbar {
-  background-color: $header-color;
+  background-color: $nav-color;
+}
+
+.entry-fields {
+  text-align: center;
 }
