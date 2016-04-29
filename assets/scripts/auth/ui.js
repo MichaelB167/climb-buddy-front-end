@@ -34,5 +34,6 @@ module.exports = {
   success,
   signInSuccess,
   signUpSuccess,
-  signOutSuccess
+  signOutSuccess,
+  updatePasswordSuccess
 };
