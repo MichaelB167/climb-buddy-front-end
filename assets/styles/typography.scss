@@ -7,10 +7,8 @@ body {
 
 header {
   color: $header-color;
-  float: left;
   font-family: $montserrat-sans;
-  margin-left: 15%;
-  margin-top: -15px;
+  margin-top: 35px;
 }
 
 .nav-buttons {
@@ -29,9 +27,13 @@ header {
   font-family: $montserrat-sans;
 }
 
-.entry-fields {
+.gym-entry-fields {
   margin-top: 60px;
   text-align: center;
+}
+
+.climb-entry-fields {
+  margin-top: 10px;
 }
 
 .section1 {

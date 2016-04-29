@@ -122,9 +122,9 @@
           </div>
           <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
-              <li><a href="#section1">Home</a></li>
-              <li><a href="#section2">Enter Climbs</a></li>
-              <li><a href="#section3">Check Your Progress</a></li>
+              <li><a href="#section1">Enter Climbs</a></li>
+              <li><a href="#section2">Show Routes</a></li>
+              <li><a href="#section3">Show Progress</a></li>
             </ul>
           </div>
         </div>
@@ -137,8 +137,16 @@
       </div>
     </nav>
 
+    <!-- home -->
+
     <div class="section1" div id="section1" class="container-fluid">
+      <header>
+        <h1>What have you climbed lately?</h1>
+      </header>
       <div class="entry-fields">
+      <!-- gym entry fields -->
+
+      <div class="gym-entry-fields">
         <form class="form-inline">
           <div class="form-group">
             <input type="text" class="form-control" id="gym-name" placeholder="Gym Name">
@@ -150,6 +158,23 @@
             <input type="date" class="form-control" id="climb-date" placeholder="Location">
           </div>
           <button type="submit" class="btn btn-default">Log Gym</button>
+        </form>
+      </div>
+
+      <!-- climb entry fields -->
+
+      <div class="climb-entry-fields">
+        <form class="form-inline">
+          <div class="form-group">
+            <input type="text" class="form-control" id="route-type" placeholder="Route Type">
+          </div>
+          <div class="form-group">
+            <input type="number" class="form-control" id="route-grade" placeholder="Route Grade">
+          </div>
+          <div class="form-group">
+            <input type="notes" class="form-control" id="fall-notes" placeholder="Fall Notes">
+          </div>
+          <button type="submit" class="btn btn-default">Log Climb</button>
           <div class="dropdown">
             <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Last Hold
               <span class="caret"></span>
@@ -166,6 +191,7 @@
           </div>
         </form>
       </div>
+    </div>
     </div>
     <div class="section2" div id="section2" class="container-fluid">
       <h1>Section 2</h1>
