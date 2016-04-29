@@ -5,9 +5,6 @@
     <script src="http://localhost:8080/webpack-dev-server.js"></script>
     <script src="vendor.bundle.js" type="text/javascript" charset="utf-8" defer></script>
     <script src="bundle.js" type="text/javascript" charset="utf-8" defer></script>
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   </head>
 
   <body data-spy="scroll">
@@ -151,9 +148,15 @@
               <h4 class="modal-title">Add a Climb</h4>
             </div>
             <div class="modal-body">
-              <div class="form-group">
-                <label for="exampleInputEmail1">Route Type</label>
-                <input class="form-control" id="routeType" placeholder="Route Type" type="text" name="climb[route_type]">
+              <label>Route Type</label>
+              <div class="radio">
+                <label><input type="radio" value="Boulder" name="climb[route_type]">Boulder</label>
+              </div>
+              <div class="radio">
+                <label><input type="radio" value="Top Rope" name="climb[route_type]">Top Rope</label>
+              </div>
+              <div class="radio">
+                <label><input type="radio" value="Lead" name="climb[route_type]">Lead</label>
               </div>
               <p>For route grades, please convert to the hueco scale</p>
               <div class="form-group">
@@ -163,6 +166,20 @@
               <div class="form-group">
                 <label for="exampleInputPassword1">Last Hold before Fall</label>
                 <input class="form-control" id="holdTypeOfFall" placeholder="Last Hold before Fall" type="text" name="climb[hold_type_of_fall]">
+              </div>
+              <div class="dropdown">
+                <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Last Hold
+                  <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Jug</a></li>
+                  <li><a href="#">Crimp</a></li>
+                  <li><a href="#">Sloper</a></li>
+                  <li><a href="#">Pinch</a></li>
+                  <li><a href="#">Pocket</a></li>
+                  <li><a href="#">Undercling</a></li>
+                  <li><a href="#">Sidepull</a></li>
+                </ul>
               </div>
               <div class="form-group">
                 <label for="exampleInputPassword1">Fall Notes</label>
@@ -214,8 +231,8 @@
       <header>
         <h1>What have you climbed lately?</h1>
       </header>
-      <button type="button" class="btn btn primary" data-toggle="modal" data-target="#addGymModal">Add a Gym</button>
-      <button type="button" class="btn btn primary" data-toggle="modal" data-target="#addClimbModal">Add a Climb</button>
+      <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#addGymModal">Add a Gym</button>
+      <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#addClimbModal">Add a Climb</button>
       <div class="entry-fields">
 
       <!-- climb entry fields -->
@@ -236,7 +253,7 @@
             <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Last Hold
               <span class="caret"></span>
             </button>
-            <ol class="dropdown-menu">
+            <ul class="dropdown-menu">
               <li><a href="#">Jug</a></li>
               <li><a href="#">Crimp</a></li>
               <li><a href="#">Sloper</a></li>
@@ -244,7 +261,7 @@
               <li><a href="#">Pocket</a></li>
               <li><a href="#">Undercling</a></li>
               <li><a href="#">Sidepull</a></li>
-            </ol>
+            </ul>
           </div>
         </form>
       </div>
@@ -256,8 +273,6 @@
     <div class="section3" div id="section3" class="container-fluid">
       <h1>Section 3</h1>
     </div>
-
-
 
   </body>
 </html>
