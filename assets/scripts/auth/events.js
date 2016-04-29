@@ -34,6 +34,12 @@ const addHandlers = () => {
       //get data, prevents default
       authApi.createGym(authUi.createGymSuccess, authUi.failure, data);
   });
+  $('#addClimbModal').on('submit', function (event) {
+      event.preventDefault();
+      let data = getFormFields(event.target);
+      //get data, prevents default
+      authApi.createClimb(authUi.createClimbSuccess, authUi.failure, data);
+  });
 };
 
 

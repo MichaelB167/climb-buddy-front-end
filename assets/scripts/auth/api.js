@@ -96,6 +96,7 @@ const createClimb = (success, failure, data) => {
   $.ajax({
     method: "POST",
     url: app.api + '/climbs',
+    dataType: 'json',
     headers: {
       Authorization: 'Token token='+ app.user.token,
     },
