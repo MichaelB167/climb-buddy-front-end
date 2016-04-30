@@ -158,10 +158,10 @@
               <div class="radio">
                 <label><input type="radio" value="Lead" name="climb[route_type]">Lead</label>
               </div>
-              <p>For route grades, please convert to the hueco scale</p>
+              <p>For route grades, please convert to the bouldering scale where >5.10+ is V0.  For example: <br></br>5.11- is V1, 5.12- is V4 etc.</p>
               <div class="form-group">
-                <label>Route Grade</label>
-                <input class="form-control" id="routeGrade" placeholder="Route Grade" type="number" name="climb[route_grade]">
+                <label>Route Grade</label><br></br>
+                <label>V <label><input class="form-control" id="routeGrade" placeholder="Route Grade" type="number" name="climb[route_grade]">
               </div>
               <div class="form-group">
                 <label>Last Hold before Fall</label>
@@ -221,8 +221,9 @@
 
     <!-- home -->
 
-    <div class="section1" div id="section1" class="container-fluid">
-      <header>
+    <div class="enter-info" div id="section1" class="container-fluid">
+      <header class="section-headers">
+        <header class="home-header">
         <h1>What have you climbed lately?</h1>
       </header>
       <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#addGymModal">Add a Gym</button>

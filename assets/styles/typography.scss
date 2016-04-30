@@ -5,9 +5,12 @@ body {
   position: relative;
 }
 
-header {
+.section-headers {
   color: $header-color;
   font-family: $montserrat-sans;
+}
+
+.home-header {
   margin-top: 35px;
 }
 
@@ -27,7 +30,7 @@ header {
   font-family: $montserrat-sans;
 }
 
-.section1 {
+.enter-info {
   background-image: url('http://i.imgur.com/ZxvmZhm.jpg');
   background-repeat: no-repeat;
   background-size: cover;
