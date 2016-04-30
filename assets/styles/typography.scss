@@ -11,6 +11,11 @@ body {
   font-family: $montserrat-sans;
 }
 
+
+.site-info {
+  margin-top: 60px;
+}
+
 .home-header {
   margin-top: 35px;
 }
@@ -56,19 +61,24 @@ body {
   border-radius: 60px;
   height: 170px;
   margin: 0 auto;
-  margin-top: 340px;
+  margin-top: 320px;
   text-align: center;
   width: 450px;
 }
 
 .list-climbs {
-  background-color: $background-color;
+  background-image: url('http://i.imgur.com/v9OGs2n.png');
   height: 780px;
 }
 
 .my-climbs {
-  padding-top: 100px;
+  padding-top: 75px;
   position: relative;
+  text-align: center;
+}
+
+.gyms-container {
+  margin: 0 auto;
   text-align: center;
 }
 
