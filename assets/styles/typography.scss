@@ -27,15 +27,6 @@ header {
   font-family: $montserrat-sans;
 }
 
-.gym-entry-fields {
-  margin-top: 60px;
-  text-align: center;
-}
-
-.climb-entry-fields {
-  margin-top: 10px;
-}
-
 .section1 {
   background-image: url('http://i.imgur.com/ZxvmZhm.jpg');
   background-repeat: no-repeat;
@@ -48,9 +39,8 @@ header {
 .section2 {
   background-color: $background-color;
   height: 780px;
-
 }
 
 .section3 {
-  height: 500px;
+  height: 780px;
 }
