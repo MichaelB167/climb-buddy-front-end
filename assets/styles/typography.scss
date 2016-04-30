@@ -20,10 +20,6 @@ body {
   margin-top: 35px;
 }
 
-.app-descripion {
-  font-size: 500px;
-}
-
 .modal-content {
   background-color: $modal-background-color;
 }
@@ -72,9 +68,22 @@ body {
 }
 
 .my-climbs {
-  padding-top: 75px;
-  position: relative;
   text-align: center;
+  color: $gym-button-font-color;
+}
+
+.positioning {
+  height: 80px;
+}
+
+.show-buttons {
+  background-color: $gym-button-background-color;
+  border: 10px solid;
+  border-color: $gym-button-border-color;
+  border-radius: 60px;
+  height: 140px;
+  margin: 0 auto;
+  width: 680px;
 }
 
 .gyms-container {
