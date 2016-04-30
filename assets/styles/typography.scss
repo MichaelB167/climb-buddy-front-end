@@ -13,11 +13,15 @@ body {
 
 
 .site-info {
-  margin-top: 60px;
-}
-
-.home-header {
-  margin-top: 35px;
+  background-color: $input-background-color;
+  border: 10px solid;
+  border-color: $input-border-color;
+  border-radius: 60px;
+  height: 140px;
+  margin: 0 auto;
+  margin-top: 180px;
+  text-align: center;
+  width: 700px;
 }
 
 .modal-content {
@@ -55,11 +59,11 @@ body {
   border: 10px solid;
   border-color: $input-border-color;
   border-radius: 60px;
-  height: 170px;
+  height: 180px;
   margin: 0 auto;
-  margin-top: 320px;
+  margin-top: 45px;
   text-align: center;
-  width: 450px;
+  width: 610px;
 }
 
 .list-climbs {
@@ -73,7 +77,7 @@ body {
 }
 
 .positioning {
-  height: 80px;
+  height: 100px;
 }
 
 .show-buttons {
