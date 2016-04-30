@@ -14,11 +14,15 @@ body {
   margin-top: 35px;
 }
 
+.app-descripion {
+  font-size: 500px;
+}
+
 .nav-buttons {
   float: right;
   margin: 0 auto;
-  margin-top: -50px;
   margin-right: 30px;
+  margin-top: -50px;
 }
 
 .navbar {
@@ -35,8 +39,21 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   height: 780px;
-  text-align: center;
   padding: 50px;
+  text-align: center;
+
+}
+
+.climb-inputs {
+  background-color: $input-background-color;
+  border: 10px solid;
+  border-color: $input-border-color;
+  border-radius: 60px;
+  height: 170px;
+  margin: 0 auto;
+  margin-top: 340px;
+  text-align: center;
+  width: 450px;
 }
 
 .section2 {
