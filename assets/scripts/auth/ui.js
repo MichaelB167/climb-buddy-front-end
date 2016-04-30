@@ -21,26 +21,6 @@ const updatePasswordSuccess = () => {
   console.log('changed password');
 };
 
-const getGymsSuccess = (data) => {
-  app.gyms = data.gyms;
-  console.log(data);
-};
-
-const getClimbsSuccess = (data) => {
-  app.gyms = data.gyms;
-  console.log(data);
-};
-
-const createGymSuccess = (data) => {
-  app.gym = data.gym;
-  console.log(data);
-};
-
-const createClimbSuccess = (data) => {
-  app.climb = data.climb;
-  console.log(data);
-};
-
 const success = (data) => {
   console.log(data);
 };
@@ -56,8 +36,4 @@ module.exports = {
   signUpSuccess,
   signOutSuccess,
   updatePasswordSuccess,
-  createClimbSuccess,
-  createGymSuccess,
-  getGymsSuccess,
-  getClimbsSuccess
 };

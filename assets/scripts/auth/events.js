@@ -3,8 +3,9 @@
 const getFormFields = require('../../../lib/get-form-fields.js');
 
 const authApi = require('./api');
-const authAppApi = require('./app-api');
+const authClimbApi = require('./climb-api');
 const authUi = require('./ui');
+const authClimbUi = require('./climb-ui');
 
 const addHandlers = () => {
   $('#signUpModal').on('submit', function (event) {
@@ -33,13 +34,13 @@ const addHandlers = () => {
       event.preventDefault();
       let data = getFormFields(event.target);
       //get data, prevents default
-      authAppApi.createGym(authUi.createGymSuccess, authUi.failure, data);
+      authClimbApi.createGym(authClimbUi.createGymSuccess, authUi.failure, data);
   });
   $('#addClimbModal').on('submit', function (event) {
       event.preventDefault();
       let data = getFormFields(event.target);
       //get data, prevents default
-      authAppApi.createClimb(authUi.createClimbSuccess, authUi.failure, data);
+      authClimbApi.createClimb(authClimbUi.createClimbSuccess, authUi.failure, data);
   });
 };
 
