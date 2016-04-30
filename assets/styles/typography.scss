@@ -1,5 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat:700);
 $montserrat-sans: Montserrat, sans-serif;
+$asset-path: '../img';
 
 body {
   position: relative;
@@ -16,6 +17,10 @@ body {
 
 .app-descripion {
   font-size: 500px;
+}
+
+.modal-content {
+  background-color: $modal-background-color;
 }
 
 .nav-buttons {
@@ -56,9 +61,15 @@ body {
   width: 450px;
 }
 
-.section2 {
+.list-climbs {
   background-color: $background-color;
   height: 780px;
+}
+
+.my-climbs {
+  padding-top: 100px;
+  position: relative;
+  text-align: center;
 }
 
 .section3 {
