@@ -12,7 +12,7 @@ const signUpSuccess = (data) => {
 const signInSuccess = (data) => {
   app.user = data.user;
   console.log(data);
-  climbApi.getClimbs(climbUi.displayClimbs, climbUi.failure);
+  climbApi.getClimbs(climbUi.getClimbsSuccess, climbUi.failure);
 };
 
 const signOutSuccess = () => {
