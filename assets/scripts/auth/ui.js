@@ -1,6 +1,8 @@
 'use strict';
 
 const app = require('../app-data');
+const climbApi = require('./climb-api');
+const climbUi = require('./climb-ui');
 
 const signUpSuccess = (data) => {
   app.user = data.user;
@@ -10,6 +12,7 @@ const signUpSuccess = (data) => {
 const signInSuccess = (data) => {
   app.user = data.user;
   console.log(data);
+  climbApi.getClimbs(climbUi.displayClimbs, climbUi.failure);
 };
 
 const signOutSuccess = () => {
