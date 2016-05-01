@@ -1,0 +1,16 @@
+<tr class="table-top-row">
+  <td>Route Type</td>
+  <td>Route Grade</td>
+  <td>Last Hold Before Fall</td>
+  <td>Fall Notes</td>
+</tr>
+<tr class="table-top-row">
+  {{#each contacts}}
+    {{#each this}}
+  <tr>
+    <td>{{this.route_type}}</td>
+    <td>{{this.route_grade}}</td>
+    <td>{{this.hold_type_of_fall}}</td>
+    <td>{{this.fall_notes}}</td>
+  </tr>
+  {{/each}}
