@@ -202,6 +202,58 @@
       </div>
     </div>
 
+    <!--update climb modal-->
+
+    <div class="modal fade" id="updateClimbModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <form role="form" id="updateClimbForm">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+              <h4 class="modal-title">Update a Climb</h4>
+            </div>
+            <div class="modal-body">
+              <label>Route Type</label>
+              <div class="radio">
+                <label><input type="radio" value="Boulder" name="climb[route_type]">Boulder</label>
+              </div>
+              <div class="radio">
+                <label><input type="radio" value="Top Rope" name="climb[route_type]">Top Rope</label>
+              </div>
+              <div class="radio">
+                <label><input type="radio" value="Lead" name="climb[route_type]">Lead</label>
+              </div>
+              <div class="form-group">
+                <label>Route Grade</label><br></br>
+                <label>5. <label><input class="form-control" id="routeGrade" placeholder="Route Grade" type="number" name="climb[route_grade]">
+              </div>
+              <div class="form-group">
+                <label>Last Hold before Fall</label>
+                <select class="form-control" id="holdTypeOfFall" name="climb[hold_type_of_fall]">
+                  <option>Jug</option>
+                  <option>Crimp</option>
+                  <option>Sloper</option>
+                  <option>Pinch</option>
+                  <option>Pocket</option>
+                  <option>Undercling</option>
+                  <option>Sidepull</option>
+                  <option>Gaston</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>Fall Notes</label>
+                <input class="form-control" id="fallNotes" placeholder="Fall Notes" type="text" name="climb[fall_notes]">
+              </div>
+            </div>
+            <div class="modal-footer">
+              <a href="#" data-dismiss="modal" class="btn">Close</a>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
     <!--navbar-->
 
     <nav class="navbar navbar-inverse navbar-fixed-top">
