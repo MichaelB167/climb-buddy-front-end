@@ -64,11 +64,21 @@ const addHandlers = () => {
       $(".update-climb-btn").attr("data-climb-id", id);
   });
 
-  $('#deleteClimbBtn').on('click', function (event) {
+  // delete climb button handler
+
+  $('.delete-climb-btn').on('click', function (event) {
       //get data, prevents default
-      console.log('something happened');
       event.preventDefault();
-      authClimbApi.deleteClimb(authClimbUi.deleteClimbSuccess, authUi.failure);
+      let id = $(this).attr("data-climb-id");
+      authClimbApi.deleteClimb(authClimbUi.deleteClimbSuccess, authUi.failure, id);
+  });
+
+  //add climb id to delete button
+
+  $('.content-display').on('click', '.delete-climb', function(event){
+      event.preventDefault();
+      let id = $(event.target).attr("data-climb-id");
+      $(".delete-climb-btn").attr("data-climb-id", id);
   });
 
   //hide modals after submits
