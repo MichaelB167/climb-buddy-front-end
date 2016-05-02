@@ -92,6 +92,12 @@ const addHandlers = () => {
       $('#updateClimbModal').modal('hide');
   });
 
+  //hides training suggestions on page load
+
+  $(document).ready(function(){
+    $("#jug, #crimp, #sloper, #pinch, #pocket, #undercling, #sidepull, #gaston").hide();
+});
+
 };
 
 module.exports = {
