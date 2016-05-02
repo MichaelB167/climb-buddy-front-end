@@ -58,11 +58,6 @@ const createClimb = (success, failure, data) => {
 
 // Define Climb Id
 
-let climbId;
-let getClimbId = function(e) {
-  climbId = $(e.target).attr('data-id');
-};
-
 const updateClimb = (success, failure, data, climb_id) => {
   $.ajax({
     method: "PATCH",
@@ -95,5 +90,4 @@ module.exports = {
   createClimb,
   updateClimb,
   deleteClimb,
-  getClimbId
 };
