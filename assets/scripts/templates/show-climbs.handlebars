@@ -1,10 +1,12 @@
 {{#each climbs}}
-  <div class="climbs" data-id= {{id}}>
-    Route Type: {{route_type}}<br/> Route Grade: {{route_grade}}<br/> Last Hold: {{hold_type_of_fall}}<br/> Fall Notes: {{fall_notes}}<br/>
+  {{#each this}}
+    <div class="climb-list" data-id= {{id}}>
+      Route Type: {{route_type}}<br/> Route Grade: {{route_grade}}<br/> Last Hold: {{hold_type_of_fall}}<br/> Fall Notes: {{fall_notes}}<br/>
 
-    <div class=update-delete-modals>
-      <button class="btn btn-primary btn-md update-climb" data-toggle="modal" data-target="#updateClimbModal" data-id= {{id}}>Update</button>
-      <button type="button" class="btn btn-primary btn-md delete-climb" data-id= {{id}} id="delete-climb">Delete</button>
+      <div class=update-delete-modals>
+        <button class="btn btn-primary btn-md update-climb" data-toggle="modal" data-target="#updateClimbModal" data-id= {{id}}>Update</button>
+        <button type="button" class="btn btn-primary btn-md delete-climb" data-id= {{id}} id="delete-climb">Delete</button>
+      </div>
     </div>
-  </div>
+  {{/each}}
 {{/each}}
