@@ -95,6 +95,21 @@ body {
   text-align: center;
 }
 
+.climb-list {
+  background-color: $gym-button-background-color;
+  border: 5px solid;
+  border-color: $gym-button-border-color;
+  border-radius: 50px;
+  color: $climb-list-font-color;
+  display: inline-block;
+  height: 150px;
+  margin-left: 15px;
+  margin-top: 15px;
+  padding-top: 10px;
+  text-align: center;
+  width: 230px;
+}
+
 .section3 {
   height: 1200px;
 }
