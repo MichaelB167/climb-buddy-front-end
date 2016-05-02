@@ -42,7 +42,13 @@ const addHandlers = () => {
       //get data, prevents default
       authClimbApi.createClimb(authClimbUi.createClimbSuccess, authUi.failure, data);
   });
+  $('#deleteClimbBtn').on('click', function (event) {
+      //get data, prevents default
+    event.preventDefault();
+    authClimbApi.deleteClimb(authClimbUi.deleteClimbSuccess, authUi.failure);
+  });
 };
+
 
 
 
