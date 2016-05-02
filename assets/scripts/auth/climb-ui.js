@@ -9,7 +9,7 @@ const getGymsSuccess = (data) => {
 
 const getClimbsSuccess = (climbs) => {
   let showClimbs = require('../templates/show-climbs.handlebars');
-  $('.content-display').append(showClimbs({climbs}));
+  $('.content-display').html(showClimbs({climbs}));
 };
 
 const createGymSuccess = (data) => {
@@ -22,6 +22,11 @@ const createClimbSuccess = (data) => {
   console.log(data);
 };
 
+const deleteClimbSuccess = () => {
+  app.climb = null;
+  console.log('successfully deleted climb');
+};
+
 const failure = (error) => {
   console.error(error);
 };
@@ -31,5 +36,6 @@ module.exports = {
   createGymSuccess,
   getGymsSuccess,
   getClimbsSuccess,
+  deleteClimbSuccess,
   failure
 };

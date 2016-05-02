@@ -44,8 +44,9 @@ const addHandlers = () => {
   });
   $('#deleteClimbBtn').on('click', function (event) {
       //get data, prevents default
-    event.preventDefault();
-    authClimbApi.deleteClimb(authClimbUi.deleteClimbSuccess, authUi.failure);
+      console.log('button click');
+      event.preventDefault();
+      authClimbApi.deleteClimb(authClimbUi.deleteClimbSuccess, authUi.failure);
   });
 };
 
