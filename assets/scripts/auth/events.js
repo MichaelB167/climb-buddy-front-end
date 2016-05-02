@@ -42,6 +42,12 @@ const addHandlers = () => {
       //get data, prevents default
       authClimbApi.createClimb(authClimbUi.createClimbSuccess, authUi.failure, data);
   });
+  $('#updateClimbModal').on('submit', function (event) {
+      event.preventDefault();
+      let data = getFormFields(event.target);
+      //get data, prevents default
+      authClimbApi.updateClimb(authClimbUi.updateClimbSuccess, authUi.failure, data);
+  });
   $('#deleteClimbBtn').on('click', function (event) {
       //get data, prevents default
       console.log('button click');
