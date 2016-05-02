@@ -50,10 +50,33 @@ const addHandlers = () => {
   });
   $('#deleteClimbBtn').on('click', function (event) {
       //get data, prevents default
-      console.log('button click');
+      console.log('something happened');
       event.preventDefault();
       authClimbApi.deleteClimb(authClimbUi.deleteClimbSuccess, authUi.failure);
   });
+
+  //hide modals after submits
+  $('#signUpForm').submit(function() {
+      $('#signUpModal').modal('hide');
+  });
+  $('#signInForm').submit(function() {
+      $('#signInModal').modal('hide');
+  });
+  $('#changePasswordForm').submit(function() {
+      $('#changePasswordModal').modal('hide');
+  });
+  $('#addGymForm').submit(function() {
+      $('#addGymModal').modal('hide');
+  });
+  $('#addClimbForm').submit(function() {
+      $('#addClimbModal').modal('hide');
+  });
+  $('#updateClimbForm').submit(function() {
+      $('#updateClimbModal').modal('hide');
+  });
+
+
+
 };
 
 
