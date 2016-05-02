@@ -71,11 +71,11 @@ const updateClimb = (success, failure, data, climb_id) => {
   .fail(failure);
 };
 
-const deleteClimb = (success, failure, event) => {
+const deleteClimb = (success, failure, climb_id) => {
   $.ajax({
-    url: app.api + '/climbs/' + $(event.target).attr('data-id'),
-    method: 'DELETE',
-    header: {
+    url: app.api + '/climbs/' + climb_id,
+    method: "DELETE",
+    headers: {
       Authorization: 'Token token=' + app.user.token,
     },
   })
