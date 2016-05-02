@@ -22,6 +22,10 @@ const createClimbSuccess = (data) => {
   console.log(data);
 };
 
+const updateClimbSuccess = () => {
+  console.log('updated climb');
+};
+
 const deleteClimbSuccess = () => {
   app.climb = null;
   console.log('successfully deleted climb');
@@ -36,6 +40,7 @@ module.exports = {
   createGymSuccess,
   getGymsSuccess,
   getClimbsSuccess,
+  updateClimbSuccess,
   deleteClimbSuccess,
   failure
 };
