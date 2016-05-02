@@ -56,6 +56,13 @@ const createClimb = (success, failure, data) => {
   .fail(failure);
 };
 
+// Define Climb Id
+
+let climbId;
+let getClimbId = function(e) {
+  climbId = $(e.target).attr('data-id');
+};
+
 const updateClimb = (success, failure, data, climb_id) => {
   $.ajax({
     method: "PATCH",
@@ -69,9 +76,9 @@ const updateClimb = (success, failure, data, climb_id) => {
   .fail(failure);
 };
 
-const deleteClimb = (success, failure, climb_id) => {
+const deleteClimb = (success, failure, event) => {
   $.ajax({
-    url: app.api + '/climbs/' + climb_id,
+    url: app.api + '/climbs/' + $(event.target).attr('data-id'),
     method: 'DELETE',
     header: {
       Authorization: 'Token token=' + app.user.token,
@@ -87,5 +94,6 @@ module.exports = {
   createGym,
   createClimb,
   updateClimb,
-  deleteClimb
+  deleteClimb,
+  getClimbId
 };
