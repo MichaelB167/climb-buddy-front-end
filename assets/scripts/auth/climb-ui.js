@@ -22,7 +22,8 @@ const createClimbSuccess = (data) => {
   console.log(data);
 };
 
-const updateClimbSuccess = () => {
+const updateClimbSuccess = (data) => {
+  console.log(data);
   console.log('updated climb');
 };
 

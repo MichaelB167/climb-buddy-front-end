@@ -8,6 +8,9 @@ const authUi = require('./ui');
 const authClimbUi = require('./climb-ui');
 
 const addHandlers = () => {
+
+  //user events
+
   $('#signUpModal').on('submit', function (event) {
     event.preventDefault();
     let data = getFormFields(event.target);
@@ -30,6 +33,9 @@ const addHandlers = () => {
       event.preventDefault();
       authApi.updatePassword(authUi.updatePasswordSuccess, authUi.failure, data);
   });
+
+  //gym and climb events
+
   $('#addGymModal').on('submit', function (event) {
       event.preventDefault();
       let data = getFormFields(event.target);
@@ -44,10 +50,20 @@ const addHandlers = () => {
   });
   $('#updateClimbModal').on('submit', function (event) {
       event.preventDefault();
+      let id = $(".update-climb-btn").attr("data-climb-id");
       let data = getFormFields(event.target);
       //get data, prevents default
-      authClimbApi.updateClimb(authClimbUi.updateClimbSuccess, authUi.failure, data);
+      authClimbApi.updateClimb(authClimbUi.updateClimbSuccess, authUi.failure, data, id);
   });
+
+  // add climb id to update submit button
+
+  $('.content-display').on('click', '.update-climb', function(event){
+      event.preventDefault();
+      let id = $(event.target).attr("data-climb-id");
+      $(".update-climb-btn").attr("data-climb-id", id);
+  });
+
   $('#deleteClimbBtn').on('click', function (event) {
       //get data, prevents default
       console.log('something happened');
@@ -56,6 +72,7 @@ const addHandlers = () => {
   });
 
   //hide modals after submits
+
   $('#signUpForm').submit(function() {
       $('#signUpModal').modal('hide');
   });
@@ -75,12 +92,7 @@ const addHandlers = () => {
       $('#updateClimbModal').modal('hide');
   });
 
-
-
 };
-
-
-
 
 module.exports = {
   addHandlers
