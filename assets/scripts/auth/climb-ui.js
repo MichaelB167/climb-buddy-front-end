@@ -10,6 +10,7 @@ const getGymsSuccess = (data) => {
 const getClimbsSuccess = (climbs) => {
   let showClimbs = require('../templates/show-climbs.handlebars');
   $('.content-display').html(showClimbs({climbs}));
+  $('#training-display').text(JSON.stringify(climbs));
 };
 
 const createGymSuccess = (data) => {
@@ -43,5 +44,5 @@ module.exports = {
   getClimbsSuccess,
   updateClimbSuccess,
   deleteClimbSuccess,
-  failure
+  failure,
 };
