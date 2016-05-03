@@ -56,8 +56,6 @@ const createClimb = (success, failure, data) => {
   .fail(failure);
 };
 
-// Define Climb Id
-
 const updateClimb = (success, failure, data, climb_id) => {
   $.ajax({
     method: "PATCH",

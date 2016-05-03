@@ -111,10 +111,10 @@ const addHandlers = () => {
   });
 
   //hides training suggestions on page load
-
-  $(document).ready(function(){
-    $("#jug, #crimp, #sloper, #pinch, #pocket, #undercling, #sidepull, #gaston").hide();
-});
+// UN-COMMENT ON WHEN TOGGLE IS FUNCTIONING
+//  $(document).ready(function(){
+//    $("#jug, #crimp, #sloper, #pinch, #pocket, #undercling, #sidepull, #gaston").hide();
+// });
 
 };
 
