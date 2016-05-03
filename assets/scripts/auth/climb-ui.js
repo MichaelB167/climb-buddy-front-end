@@ -1,10 +1,15 @@
 'use strict';
 
 const app = require('../app-data');
+const authClimbApi = require('./climb-api');
 
 const getGymsSuccess = (data) => {
   app.gyms = data.gyms;
   console.log(data);
+};
+
+const failure = (error) => {
+  console.error(error);
 };
 
 const getClimbsSuccess = (climbs) => {
@@ -27,15 +32,13 @@ const createClimbSuccess = (data) => {
 const updateClimbSuccess = (data) => {
   console.log(data);
   console.log('updated climb');
+  authClimbApi.getClimbs(getClimbsSuccess, failure);
 };
 
 const deleteClimbSuccess = () => {
   app.climb = null;
   console.log('successfully deleted climb');
-};
-
-const failure = (error) => {
-  console.error(error);
+  authClimbApi.getClimbs(getClimbsSuccess, failure);
 };
 
 module.exports = {

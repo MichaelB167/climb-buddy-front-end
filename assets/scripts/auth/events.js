@@ -59,7 +59,6 @@ const addHandlers = () => {
       let data = getFormFields(event.target);
       //get data, prevents default
       authClimbApi.updateClimb(authClimbUi.updateClimbSuccess, authUi.failure, data, id);
-      authClimbApi.getClimbs(authClimbUi.getClimbsSuccess, authUi.failure);
   });
 
   // add climb id to update submit button
@@ -76,8 +75,7 @@ const addHandlers = () => {
       //get data, prevents default
       event.preventDefault();
       let id = $(this).attr("data-climb-id");
-      $.when(authClimbApi.deleteClimb(authClimbUi.deleteClimbSuccess, authUi.failure, id)).then(function() {
-        authClimbApi.getClimbs(authClimbUi.getClimbsSuccess, authUi.failure);});
+      authClimbApi.deleteClimb(authClimbUi.deleteClimbSuccess, authUi.failure, id);
   });
 
   //add climb id to delete button
