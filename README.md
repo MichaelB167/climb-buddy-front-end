@@ -6,6 +6,15 @@ Back end repository: <https://github.com/MichaelB167/climb-buddy-back-end>
 
 ## App Explanation
 
+This web app is an indoor rock climbing training resource for identifying
+difficult movements and improving at executing them.  Users can input the
+results of their climbing sessions by adding the gym they climbed in and
+specific traits of climbs they fell on.  They can then see a list of these
+climbs to pick out trends that they could work on improving.  If they want
+personalized training suggestions, they can request to see the holds that they
+fall on most frequently along with advice on how to target specific muscle
+groups that are required for more efficient use of those holds. 
+
 ## Technologies Used
 
 I used HTML and SCSS to style the page's front end.  To add the menu modals I
