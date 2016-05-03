@@ -42,6 +42,6 @@ security.
 1.  As a user, I want to be able to sign out when I’m done inputting climbs and
 getting results to conclude the session.
 
-## Wireframes
+## Wireframes/Database Structure
 
-<http://imgur.com/a/YBlKy>
+<http://i.imgur.com/XVvYTwi.jpg>
