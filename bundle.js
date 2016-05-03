@@ -98,6 +98,11 @@ webpackJsonp([0],[
 	        //get data, prevents default
 	        authClimbApi.createClimb(authClimbUi.createClimbSuccess, authUi.failure, data);
 	    });
+	    $('#viewAllClimbs').on('click', function (event) {
+	        //get data, prevents default
+	        event.preventDefault();
+	        authClimbApi.getClimbs(authClimbUi.getClimbsSuccess, authUi.failure);
+	    });
 	    $('#updateClimbModal').on('submit', function (event) {
 	        event.preventDefault();
 	        var id = $(".update-climb-btn").attr("data-climb-id");
@@ -150,6 +155,9 @@ webpackJsonp([0],[
 	    });
 	    $('#updateClimbForm').submit(function () {
 	        $('#updateClimbModal').modal('hide');
+	    });
+	    $('#delete-climb-btn').click(function () {
+	        $('#deleteClimbModal').modal('hide');
 	    });
 
 	    //hides training suggestions on page load
@@ -296,7 +304,9 @@ webpackJsonp([0],[
 	'use strict';
 
 	var app = {
-	  api: 'http://localhost:3000'
+	  //  api: 'http://localhost:3000',
+	  //  };
+	  api: 'https://climb-buddy.herokuapp.com'
 	};
 
 	module.exports = app;
@@ -406,7 +416,6 @@ webpackJsonp([0],[
 	var signInSuccess = function signInSuccess(data) {
 	  app.user = data.user;
 	  console.log(data);
-	  climbApi.getClimbs(climbUi.getClimbsSuccess, climbUi.failure);
 	};
 
 	var signOutSuccess = function signOutSuccess() {
@@ -442,16 +451,22 @@ webpackJsonp([0],[
 	/* WEBPACK VAR INJECTION */(function($) {'use strict';
 
 	var app = __webpack_require__(7);
+	var authClimbApi = __webpack_require__(8);
 
 	var getGymsSuccess = function getGymsSuccess(data) {
 	  app.gyms = data.gyms;
 	  console.log(data);
 	};
 
+	var failure = function failure(error) {
+	  console.error(error);
+	};
+
 	var getClimbsSuccess = function getClimbsSuccess(climbs) {
 	  var showClimbs = __webpack_require__(11);
 	  $('.content-display').html(showClimbs({ climbs: climbs }));
 	  $('#training-display').text(JSON.stringify(climbs));
+	  $('#training-display').text(JSON.stringify(climbs.climbs.hold_type_of_fall));
 	};
 
 	var createGymSuccess = function createGymSuccess(data) {
@@ -467,15 +482,13 @@ webpackJsonp([0],[
 	var updateClimbSuccess = function updateClimbSuccess(data) {
 	  console.log(data);
 	  console.log('updated climb');
+	  authClimbApi.getClimbs(getClimbsSuccess, failure);
 	};
 
 	var deleteClimbSuccess = function deleteClimbSuccess() {
 	  app.climb = null;
 	  console.log('successfully deleted climb');
-	};
-
-	var failure = function failure(error) {
-	  console.error(error);
+	  authClimbApi.getClimbs(getClimbsSuccess, failure);
 	};
 
 	module.exports = {
