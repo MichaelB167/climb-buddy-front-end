@@ -59,6 +59,7 @@ const addHandlers = () => {
       let data = getFormFields(event.target);
       //get data, prevents default
       authClimbApi.updateClimb(authClimbUi.updateClimbSuccess, authUi.failure, data, id);
+      authClimbApi.getClimbs(authClimbUi.getClimbsSuccess, authUi.failure);
   });
 
   // add climb id to update submit button
@@ -75,7 +76,8 @@ const addHandlers = () => {
       //get data, prevents default
       event.preventDefault();
       let id = $(this).attr("data-climb-id");
-      authClimbApi.deleteClimb(authClimbUi.deleteClimbSuccess, authUi.failure, id);
+      $.when(authClimbApi.deleteClimb(authClimbUi.deleteClimbSuccess, authUi.failure, id)).then(function() {
+        authClimbApi.getClimbs(authClimbUi.getClimbsSuccess, authUi.failure);});
   });
 
   //add climb id to delete button
@@ -105,6 +107,9 @@ const addHandlers = () => {
   });
   $('#updateClimbForm').submit(function() {
       $('#updateClimbModal').modal('hide');
+  });
+  $('#delete-climb-btn').submit(function() {
+      $('#deleteClimbModal').modal('hide');
   });
 
   //hides training suggestions on page load
