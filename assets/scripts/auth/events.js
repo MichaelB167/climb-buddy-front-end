@@ -106,7 +106,7 @@ const addHandlers = () => {
   $('#updateClimbForm').submit(function() {
       $('#updateClimbModal').modal('hide');
   });
-  $('#delete-climb-btn').submit(function() {
+  $('#delete-climb-btn').click(function() {
       $('#deleteClimbModal').modal('hide');
   });
 
