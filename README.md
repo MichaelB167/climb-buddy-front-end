@@ -18,9 +18,7 @@ groups that are required for more efficient use of those holds.
 ## Technologies Used
 
 I used HTML and SCSS to style the page's front end.  To add the menu modals I
-applied bootsrap styling.  JQuery facilitates user interaction with the
-gameboard via click handlers and produces a display of the game's result upon a
-win or tie condition being met.  To communicate with the back end I used a
+applied bootsrap styling.  To communicate with the back end I used a
 combination of jQuery, Javascript and AJAX.
 
 ## Approach Taken
