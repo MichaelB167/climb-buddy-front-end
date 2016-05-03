@@ -48,6 +48,11 @@ const addHandlers = () => {
       //get data, prevents default
       authClimbApi.createClimb(authClimbUi.createClimbSuccess, authUi.failure, data);
   });
+  $('#viewAllClimbs').on('click', function (event) {
+      //get data, prevents default
+      event.preventDefault();
+      authClimbApi.getClimbs(authClimbUi.getClimbsSuccess, authUi.failure);
+  });
   $('#updateClimbModal').on('submit', function (event) {
       event.preventDefault();
       let id = $(".update-climb-btn").attr("data-climb-id");
