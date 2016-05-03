@@ -12,14 +12,23 @@ results of their climbing sessions by adding the gym they climbed in and
 specific traits of climbs they fell on.  They can then see a list of these
 climbs to pick out trends that they could work on improving.  If they want
 personalized training suggestions, they can request to see the holds that they
-fall on most frequently along with advice on how to target specific muscle
+fall on most frequently along with advice on how to target muscle
 groups that are required for more efficient use of those holds.
 
 ## Technologies Used
 
-I used HTML and SCSS to style the page's front end.  To add the menu modals I
-applied bootsrap styling.  To communicate with the back end I used a
-combination of jQuery, Javascript and AJAX.
+This app was created using the following:
+
+Front End
+
+--   Javascript
+--   HTML/CSS/SASS
+--   Bootstrap
+--   Handlebars.js
+
+Back End
+
+--   Ruby on Rails
 
 ## Approach Taken
 
@@ -40,8 +49,8 @@ refer to.
 1.  As a user, I want to have the above information displayed in order to check
 my training progress.
 1.  As a user, I want to see specifically what kind of routes/holds I fall on
-the most and have a total of each displayed along with a suggestion for how to
-improve at specific movements.
+the most and have a suggestion displayed for how to
+improve at executing those movements.
 1.  As a user, I should be able to update and delete climbs so that I can
 remedy input errors.
 1.  As a user, I want to be able to change my password to maintain my account’s
@@ -51,6 +60,6 @@ getting results to conclude the session.
 
 ## Wireframes/Database Structure
 
-Wireframs: <http://imgur.com/jW5NNsf>
+Wireframes: <http://imgur.com/jW5NNsf>
 
 Entity Relationships Diagram: <http://i.imgur.com/XVvYTwi.jpg>
