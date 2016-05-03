@@ -45,7 +45,7 @@ body {
 }
 
 .enter-info {
-  background-image: url('/assets/img/joshua-tree.jpg');
+  background-image: url('http://i.imgur.com/dRt8VQK.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   height: 780px;
@@ -66,7 +66,7 @@ body {
 }
 
 .list-climbs {
-  background-image: url('/assets/img/section-2-background.png');
+  background-image: url('http://i.imgur.com/v9OGs2n.png');
   height: 850px;
 }
 
@@ -114,15 +114,19 @@ body {
 }
 
 .training {
-  background-image: url('/assets/img/section-3-background.jpg');
+  background-image: url('http://i.imgur.com/82elvzA.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   height: 1100px;
 }
 
 .dropdown {
-  margin-left: 50%;
+  margin-left: 40%;
   padding-top: 150px;
+}
+
+.get-training {
+  margin-left: 30%;
 }
 
 .jumbotron {
@@ -136,13 +140,13 @@ body {
 }
 
 .outer-training {
+  background-color: $training-background-color;
   border: 10px solid;
   border-color: $training-border-color;
-  background-color: $training-background-color;
   border-radius: 10px;
   height: 380px;
   margin: 0 auto;
-  margin-top: 10px;
+  margin-top: 20px;
   width: 57%;
 }
 
@@ -158,11 +162,11 @@ body {
 }
 
 .all-climbs {
+  color: $training-font-color;
+  font-family: $montserrat-sans;
+  font-size: medium;
   margin-left: 370px;
   margin-top: -330px;
-  color: $training-font-color;
-  font-size: medium;
-  font-family: $montserrat-sans;
 }
 
 .footer-crimp {
