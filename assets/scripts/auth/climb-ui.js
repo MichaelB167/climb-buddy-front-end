@@ -15,8 +15,8 @@ const failure = (error) => {
 const getClimbsSuccess = (climbs) => {
   let showClimbs = require('../templates/show-climbs.handlebars');
   $('.content-display').html(showClimbs({climbs}));
-  $('#training-display').text(JSON.stringify(climbs));
-  $('#training-display').text(JSON.stringify(climbs.climbs.hold_type_of_fall));
+  //$('#training-display').text(JSON.stringify(climbs));
+  //$('#training-display').text(JSON.stringify(climbs.climbs.hold_type_of_fall));
 };
 
 const createGymSuccess = (data) => {
