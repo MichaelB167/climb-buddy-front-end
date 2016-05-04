@@ -159,8 +159,11 @@ webpackJsonp([0],[
 	    $('#delete-climb-btn').click(function () {
 	        $('#deleteClimbModal').modal('hide');
 	    });
+	    //  $(document).ready(function(){
+	    //    $('#crimp').hide();
+	    //  });
 
-	    //hides training suggestions on page load
+	    //  hides training suggestions on page load
 	    // UN-COMMENT ON WHEN TOGGLE IS FUNCTIONING
 	    //  $(document).ready(function(){
 	    //    $("#jug, #crimp, #sloper, #pinch, #pocket, #undercling, #sidepull, #gaston").hide();
@@ -463,8 +466,8 @@ webpackJsonp([0],[
 	var getClimbsSuccess = function getClimbsSuccess(climbs) {
 	  var showClimbs = __webpack_require__(11);
 	  $('.content-display').html(showClimbs({ climbs: climbs }));
-	  $('#training-display').text(JSON.stringify(climbs));
-	  $('#training-display').text(JSON.stringify(climbs.climbs.hold_type_of_fall));
+	  //$('#training-display').text(JSON.stringify(climbs));
+	  //$('#training-display').text(JSON.stringify(climbs.climbs.hold_type_of_fall));
 	};
 
 	var createGymSuccess = function createGymSuccess(data) {
