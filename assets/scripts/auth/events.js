@@ -109,8 +109,11 @@ const addHandlers = () => {
   $('#delete-climb-btn').click(function() {
       $('#deleteClimbModal').modal('hide');
   });
+//  $(document).ready(function(){
+//    $('#crimp').hide();
+//  });
 
-  //hides training suggestions on page load
+//  hides training suggestions on page load
 // UN-COMMENT ON WHEN TOGGLE IS FUNCTIONING
 //  $(document).ready(function(){
 //    $("#jug, #crimp, #sloper, #pinch, #pocket, #undercling, #sidepull, #gaston").hide();
